@@ -1,8 +1,6 @@
-package com.pancm.server;
+package io.netty.study.server;
 
 import java.util.concurrent.TimeUnit;
-
-import com.pancm.protobuf.UserInfo.UserMsg;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -12,6 +10,7 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.timeout.IdleStateHandler;
+import io.netty.study.protobuf.UserInfo.UserMsg;
 
 /**
   * 

@@ -5,4 +5,4 @@
 * @author pancm
 * @date 2018年7月9日
 */
-package com.pancm.client;
+package io.netty.study.client;

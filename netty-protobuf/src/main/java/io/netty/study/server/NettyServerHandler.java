@@ -1,12 +1,11 @@
-package com.pancm.server;
-
-import com.pancm.protobuf.UserInfo;
-import com.pancm.protobuf.UserInfo.UserMsg;
+package io.netty.study.server;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.study.protobuf.UserInfo;
+import io.netty.study.protobuf.UserInfo.UserMsg;
 import io.netty.util.ReferenceCountUtil;
 
 /**

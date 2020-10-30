@@ -1,4 +1,4 @@
-package com.pancm.netty;
+package io.netty.study;
 
 /**
  * Hello world!

@@ -1,17 +1,17 @@
-package com.pancm.netty.server;
+package io.netty.study.server;
 
 import com.alibaba.fastjson.JSON;
 import com.cloudhopper.commons.util.windowing.DuplicateKeyException;
 import com.cloudhopper.commons.util.windowing.OfferTimeoutException;
 import com.cloudhopper.commons.util.windowing.Window;
 import com.cloudhopper.commons.util.windowing.WindowFuture;
-import com.pancm.netty.pojo.Message;
 
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.study.pojo.Message;
 
 /**
  * 

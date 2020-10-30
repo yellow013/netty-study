@@ -5,4 +5,4 @@
 * @author pancm
 * @date 2019年1月16日
 */
-package com.pancm.netty.pojo;
+package io.netty.study.pojo;

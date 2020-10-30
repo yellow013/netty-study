@@ -1,7 +1,7 @@
-package com.pancm.netty;
+package io.netty.study;
 
-import com.pancm.netty.client.NettyClient;
-import com.pancm.netty.server.NettyServer;
+import io.netty.study.client.NettyClient;
+import io.netty.study.server.NettyServer;
 
 /**
  * Hello world!

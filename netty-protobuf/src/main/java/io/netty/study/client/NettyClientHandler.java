@@ -1,9 +1,6 @@
-package com.pancm.client;
+package io.netty.study.client;
 
 import java.util.Date;
-
-import com.pancm.protobuf.UserInfo;
-import com.pancm.protobuf.UserInfo.UserMsg;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelHandlerContext;
@@ -11,6 +8,8 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.EventLoop;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.study.protobuf.UserInfo;
+import io.netty.study.protobuf.UserInfo.UserMsg;
 import io.netty.util.ReferenceCountUtil;
 
 /**

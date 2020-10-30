@@ -1,4 +1,4 @@
-package com.pancm.server;
+package io.netty.study.server;
 
 /**
 * @Title: NettyClientApp

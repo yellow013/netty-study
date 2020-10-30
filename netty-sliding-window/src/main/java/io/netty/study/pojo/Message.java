@@ -1,4 +1,4 @@
-package com.pancm.netty.pojo;
+package io.netty.study.pojo;
 
 import com.alibaba.fastjson.JSONObject;
 
