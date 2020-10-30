@@ -1,4 +1,4 @@
-package com.pancm.netty.server;
+package io.netty.study.server;
 
 import java.net.InetAddress;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.pancm.netty.client;
+package io.netty.study.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;

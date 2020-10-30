@@ -1,4 +1,4 @@
-package com.pancm.netty.server;
+package io.netty.study.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

@@ -1,4 +1,4 @@
-package com.pancm.netty.client;
+package io.netty.study.client;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
