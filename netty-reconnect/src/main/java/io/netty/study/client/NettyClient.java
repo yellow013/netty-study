@@ -22,13 +22,13 @@ public class NettyClient {
 
 	public String host = "127.0.0.1"; // ip地址
 	public int port = 9876; // 端口
-	// 通过nio方式来接收连接和处理连接
+	// 通过NIO方式来接收连接和处理连接
 	private EventLoopGroup group = new NioEventLoopGroup();
-	public static 	NettyClient nettyClient = new NettyClient();
-	
-	/**唯一标记 */
-	private boolean initFalg=true;
-	
+	public static NettyClient nettyClient = new NettyClient();
+
+	/** 唯一标记 */
+	private boolean initFalg = true;
+
 	public static void main(String[] args) {
 		nettyClient.run();
 	}
@@ -59,15 +59,15 @@ public class NettyClient {
 						eventLoop.schedule(() -> doConnect(new Bootstrap(), eventLoop), 10, TimeUnit.SECONDS);
 					}
 				});
-				if(initFalg){
+				if (initFalg) {
 					System.out.println("Netty客户端启动成功!");
-					initFalg=false;
+					initFalg = false;
 				}
 				// 阻塞
 				f.channel().closeFuture().sync();
 			}
 		} catch (Exception e) {
-			System.out.println("客户端连接失败!"+e.getMessage());
+			System.out.println("客户端连接失败!" + e.getMessage());
 		}
 
 	}
