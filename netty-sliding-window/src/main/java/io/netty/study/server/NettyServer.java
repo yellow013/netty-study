@@ -33,8 +33,6 @@ public class NettyServer {
 	// 定义通道组的共用定时器任务
 	private EventExecutor executor = new DefaultEventExecutor(new DefaultThreadFactory("netty-server-threadFactory"));
 
- 
-	
 	public NettyServer() {
 		// 为boss组指定一个线程
 		boss = new NioEventLoopGroup(1, new DefaultThreadFactory("netty-server-boss"));
@@ -46,7 +44,7 @@ public class NettyServer {
 
 	public void run() {
 		try {
-			//初始化
+			// 初始化
 			init();
 			// 服务器绑定端口监听
 			f = b.bind(port).sync();
@@ -72,14 +70,14 @@ public class NettyServer {
 		b.channel(NioServerSocketChannel.class);
 		//
 		int backlog = 128;
-		//设置缓冲区队列
+		// 设置缓冲区队列
 		b.option(ChannelOption.SO_BACKLOG, backlog)
-		 //设置是否可以重用端口
-		 .option(ChannelOption.SO_REUSEADDR, false);
-		//设置无延时
+				// 设置是否可以重用端口
+				.option(ChannelOption.SO_REUSEADDR, false);
+		// 设置无延时
 		b.childOption(ChannelOption.TCP_NODELAY, true)
-		//设置套接字发送缓冲区大小
-		.childOption(ChannelOption.SO_SNDBUF, 1000 * 1024 * 1024);
+				// 设置套接字发送缓冲区大小
+				.childOption(ChannelOption.SO_SNDBUF, 1000 * 1024 * 1024);
 		// 设置过滤器
 		b.childHandler(new NettyServerFilter());
 

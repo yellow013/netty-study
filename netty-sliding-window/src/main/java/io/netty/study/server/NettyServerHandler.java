@@ -34,9 +34,9 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	private final String CMD_LOGIN = "cmd_login";
 	/** 成功 */
 	private final String CMD_SUC = "ok";
-	
-	boolean flag=true;
-	
+
+	boolean flag = true;
+
 	// 滑动窗口
 	private Window<Integer, Message, Message> window = new Window<Integer, Message, Message>(20);
 
@@ -78,16 +78,16 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 			msg.setCmd(CMD_SUC);
 			msg.setMsg("登录成功！");
 			ctx.writeAndFlush(msg.toString());
-			
+
 		} else {
 			System.out.println("未知命令!" + cmd);
 			return;
 		}
-		if(flag) {
+		if (flag) {
 			msg.setCmd(CMD_SUC);
 			msg.setMsg("滑动窗口测试!");
-			new Thread(()->handlerRequest(msg,ctx)).start();
-			flag=false;
+			new Thread(() -> handlerRequest(msg, ctx)).start();
+			flag = false;
 		}
 		count++;
 	}
@@ -115,7 +115,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 			return;
 		}
 		if (null == future) {
-			System.err.println("完成窗口在完成方法引用前失败!id:"+id);
+			System.err.println("完成窗口在完成方法引用前失败!id:" + id);
 			return;
 		}
 		if (future.isSuccess()) {
@@ -151,7 +151,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 			System.out.println("滑动窗口过程中被中断!" + e);
 			return null;
 		}
-		System.out.println("滑动窗口发送的数据:"+request.toString());
+		System.out.println("滑动窗口发送的数据:" + request.toString());
 		ChannelFuture future = ctx.writeAndFlush(request.toString());
 		future.awaitUninterruptibly();
 		if (future.isCancelled()) {// 被中断
