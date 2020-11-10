@@ -18,6 +18,7 @@ import java.util.Date;
  * @date 2017年10月8日
  */
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
+
 	/** 客户端请求的心跳命令 */
 	private static final ByteBuf HEARTBEAT_SEQUENCE = Unpooled
 			.unreleasableBuffer(Unpooled.copiedBuffer("hb_request", CharsetUtil.UTF_8));

@@ -24,7 +24,8 @@ public class NettyClientFilter extends ChannelInitializer<SocketChannel> {
 		/*
 		 * 解码和编码，应和服务端一致
 		 */
-//        ph.addLast("framer", new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
+		// ph.addLast("framer", new DelimiterBasedFrameDecoder(8192,
+		// Delimiters.lineDelimiter()));
 		// 入参说明: 读超时时间、写超时时间、所有类型的超时时间、时间格式
 		// 因为服务端设置的超时时间是5秒，所以设置4秒
 		ph.addLast(new IdleStateHandler(0, 4, 0, TimeUnit.SECONDS));
